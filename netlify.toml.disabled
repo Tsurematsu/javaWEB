@@ -1,8 +1,0 @@
-[build]
-  command = "java -jar app.jar --port $PORT" 
-  timeout = 3000
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
