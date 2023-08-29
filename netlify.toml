@@ -1,0 +1,7 @@
+[build]
+  command = "java -jar app.jar --port $PORT" 
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
