@@ -11,18 +11,22 @@
     <h1>hello</h1>
     <?php
 
-    // Ejecutamos el comando 
-    $output = shell_exec('java -version');
+    try {
+        // Ejecutamos el comando 
+        $output = shell_exec('java -version');
 
-    // Mostramos el resultado
-    echo "Salida del comando: <br>";
-    echo $output;
+        // Mostramos el resultado
+        echo "Salida del comando: <br>";
+        echo $output;
 
-    // Verificamos si java está instalado
-    if (strpos($output, 'java version') !== FALSE) {
-        echo "<br>Java está instalado!";
-    } else {
-        echo "<br>Java NO está instalado";
+        // Verificamos si java está instalado
+        if (strpos($output, 'java version') !== FALSE) {
+            echo "<br>Java está instalado!";
+        } else {
+            echo "<br>Java NO está instalado";
+        } //code...
+    } catch (\Throwable $th) {
+        echo "error de documento";
     }
 
     ?>
